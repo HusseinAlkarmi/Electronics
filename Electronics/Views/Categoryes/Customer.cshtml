@@ -1,0 +1,100 @@
+﻿@model IEnumerable<Electronics.Models.Categorye>
+
+@{
+    ViewData["Title"] = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+     var id = ViewBag.session;
+     var email = ViewBag.email;
+}
+
+<style>
+
+    /* Styles for wrapping the search box */
+
+.main {
+    width: 50%;
+    margin: 50px auto;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+</style>
+
+
+<h1>Customer</h1>
+
+
+   
+
+<form asp-controller="Categoryes" asp-action="Customer">
+<div class="main">
+  
+  <div  class="input-group">
+    <input type="text" name="name" class="form-control" placeholder="Search this categories">
+    <div class="input-group-append">
+      <button class="btn btn-secondary" type="submit">      
+        <i class="fa fa-search"></i>
+      </button>
+  
+    </div>
+  </div>
+  </div>
+
+  </form>
+  
+  
+  
+
+
+
+
+
+     <div class="container mx-auto mt-4">
+  <div class="row">
+
+
+@foreach (var item in Model) {
+
+
+     <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+  <img style="height:160px;" src="@Url.Content("~/Image/" + item.Image)" class="card-img-top" alt="...">
+
+  <div class="card-body">
+    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Categoryname)</h5>
+    <br/>
+        <h6 style="text-align:center;" class="card-subtitle mb-2 text-muted">Go To Product Page </h6>
+        
+               <hr/>
+    @*<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>*@
+       <a href="/Productes/Customer/@item.CategoryId" class="btn mr-2"><i class="fas fa-link"></i> Product</a>
+@*    <a href="#" class="btn "><i class="fab fa-github"></i> Github</a>
+*@  </div>
+  </div>
+    </div>  
+
+
+
+
+    
+
+
+}
+
+</div>
+    </div> 

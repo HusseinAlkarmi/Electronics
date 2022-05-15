@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Electronics.Models.Aboute>
+@{
+    ViewData["Title"] = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+     var id = ViewBag.session;
+     var email = ViewBag.email;
+}
+
+<h1 style="text-align:center; padding:15px 0px;">About Us</h1>
+
+ <img style="height:400px; width:600px; position:relative; left:50%;" src="https://st4.depositphotos.com/11328482/24026/i/1600/depositphotos_240261230-stock-photo-laptops-modern-technology-store-department.jpg"  alt="...">
+
+
+ <div style="width:50%;">
+@foreach (var item in Model) {
+        <h2 style="position:relative; top:-300px; text-align:center;">  @Html.DisplayFor(modelItem => item.Text1)</h2>
+              
+          
+}
+
+</div>

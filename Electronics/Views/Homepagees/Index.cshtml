@@ -1,0 +1,116 @@
+﻿@model IEnumerable<Electronics.Models.Homepagee>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Image1)
+                  
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Text1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Text2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Text3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Text4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Text5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Text6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Text7)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <img style="height:180px; width:300px;" src="@Url.Content("~/Image/" + item.Image1)"  alt="...">
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text7)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.HomeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.HomeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.HomeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

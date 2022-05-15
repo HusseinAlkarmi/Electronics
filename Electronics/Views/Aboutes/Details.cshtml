@@ -1,0 +1,49 @@
+﻿@model Electronics.Models.Aboute
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Aboute</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Text1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Text1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Image1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Image1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Image2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Image2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Text3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Text3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Home)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Home.HomeId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AboutId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

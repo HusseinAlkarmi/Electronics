@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Shared/admin.cshtml";
+
+      var id = ViewBag.session;
+    var ph = ViewBag.ph;
+    var email = ViewBag.email;
+}
+
+<h1>Admin</h1>
+
+  <h1>ID: @id</h1>
+    <h1>Phone: @ph</h1>
+    <h1>Email: @email</h1>
